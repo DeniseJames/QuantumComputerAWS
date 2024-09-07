@@ -1,39 +1,35 @@
-import { useEffect, useState } from "react";
-import type { Schema } from "../amplify/data/resource";
-import { generateClient } from "aws-amplify/data";
+import React, { Suspense } from 'react';
+import { Authenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NavbarComponent from '../src/components/NavBar/NavBarComponent';
+import './App.css'; // Import your CSS file
 
-const client = generateClient<Schema>();
+// Lazy load the components
+
+const MachineLearningComponent = React.lazy(() => import('../src/components/MachineLearning/MachineLearningComponent'));
+const WebDesignComponent = React.lazy(() => import('../src/components/WebDesign/WebDesignComponent'));
+const TrainingComponent = React.lazy(() => import('../src/components/Training/TrainingComponent'));
+const LoginComponent = React.lazy(() => import('./components/LogIn/LoginComponent'));
 
 function App() {
-  const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
-
-  useEffect(() => {
-    client.models.Todo.observeQuery().subscribe({
-      next: (data) => setTodos([...data.items]),
-    });
-  }, []);
-
-  function createTodo() {
-    client.models.Todo.create({ content: window.prompt("Todo content") });
-  }
-
   return (
-    <main>
-      <h1>My todos</h1>
-      <button onClick={createTodo}>+ new</button>
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>{todo.content}</li>
-        ))}
-      </ul>
-      <div>
-        🥳 App successfully hosted. Try creating a new todo.
-        <br />
-        <a href="https://docs.amplify.aws/react/start/quickstart/#make-frontend-updates">
-          Review next step of this tutorial.
-        </a>
-      </div>
-    </main>
+    <Authenticator.Provider>
+      <Router>
+        <NavbarComponent />
+        <div className="content-wrapper"> {/* Add this wrapper */}
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+            <Route path="/login" element={<LoginComponent />} />
+              <Route path="/machine-learning" element={<MachineLearningComponent />} />
+              <Route path="/web-design" element={<WebDesignComponent />} />
+              <Route path="/training" element={<TrainingComponent />} />
+        
+            </Routes>
+          </Suspense>
+        </div>
+      </Router>
+    </Authenticator.Provider>
   );
 }
 

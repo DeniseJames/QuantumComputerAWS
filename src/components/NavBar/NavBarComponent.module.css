@@ -1,0 +1,48 @@
+.navbarContainer {
+    background-color: var(--bs-primary); /* Blue background */
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border: none; /* Remove border */
+    display: flex; /* Ensure links are on one line */
+    flex-direction: row; /* Align items in a row */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out items */
+  }
+
+  
+  .searchForm {
+    display: flex; /* Ensure search form is on one line */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .search-button {
+    background-color: #003366; /* Dark blue color */
+    color: white;
+    border: none;
+  }
+  
+  .search-button:hover {
+    background-color: #002244; /* Slightly darker blue for hover effect */
+  }
+  
+  .navContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navContent .me-auto {
+    flex-grow: 1;
+  }
+  
+  .searchForm {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+  

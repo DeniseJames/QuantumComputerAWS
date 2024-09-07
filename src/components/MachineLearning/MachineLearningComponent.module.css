@@ -1,0 +1,35 @@
+.machineLearningSection {
+    padding: 2rem;
+       color: var(--bs-dark);
+  }
+  
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .product {
+    background-color: var(--bs-primary);
+    color: var(--bs-body-color);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product h3 {
+    margin-top: 0;
+  }
+  
+  .product p {
+    margin-bottom: 0;
+  }
+  
