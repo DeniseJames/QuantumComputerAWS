@@ -11,6 +11,7 @@ const MachineLearningComponent = React.lazy(() => import('../src/components/Mach
 const WebDesignComponent = React.lazy(() => import('../src/components/WebDesign/WebDesignComponent'));
 const TrainingComponent = React.lazy(() => import('../src/components/Training/TrainingComponent'));
 const LoginComponent = React.lazy(() => import('./components/LogIn/LoginComponent'));
+const SearchResults = React.lazy(() => import('../src/components/SearchResults/SearchResultsComponent'));
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
               <Route path="/machine-learning" element={<MachineLearningComponent />} />
               <Route path="/web-design" element={<WebDesignComponent />} />
               <Route path="/training" element={<TrainingComponent />} />
-        
+              <Route path="/search" element={<SearchResults />} />
             </Routes>
           </Suspense>
         </div>

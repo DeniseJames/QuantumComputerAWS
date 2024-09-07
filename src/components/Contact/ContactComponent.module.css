@@ -1,0 +1,21 @@
+/* ContactComponent.css */
+.contact-form {
+  background-color: #f8f9fa;
+  padding: 1.25rem; /* 20px to 1.25rem */
+  border-radius: 0.5rem; /* 8px to 0.5rem */
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1); /* 10px to 0.625rem */
+}
+
+.contact-form .form-group {
+  margin-bottom: 0.9375rem; /* 15px to 0.9375rem */
+}
+
+
+.contact-form .btn {
+  width: auto; /* Remove full width */
+}
+
+.align-right {
+  display: flex;
+  justify-content: flex-end;
+}
