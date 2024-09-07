@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { useAuthenticator } from '@aws-amplify/ui-react';
-import styles from './NavBar.Component.module.css';
+import styles from './NavBarComponent.module.css';
 import { LinkContainer } from 'react-router-bootstrap';
 
 const NavbarComponent: React.FC = () => {
@@ -41,6 +41,9 @@ const NavbarComponent: React.FC = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <div className={`d-flex justify-content-between w-100 ${styles.navContent}`}>
             <Nav className="me-auto">
+            <LinkContainer to="/">
+              <Nav.Link className="text-white mx-2 fs-5">Home</Nav.Link>
+              </LinkContainer>
               <LinkContainer to="/machine-learning">
                 <Nav.Link className="text-white mx-2 fs-5">Machine Learning</Nav.Link>
               </LinkContainer>

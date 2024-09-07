@@ -6,7 +6,7 @@ import NavbarComponent from '../src/components/NavBar/NavBarComponent';
 import './App.css'; // Import your CSS file
 
 // Lazy load the components
-
+const HomeComponent = React.lazy(() => import('./components/Home/HomeComponent'));
 const MachineLearningComponent = React.lazy(() => import('../src/components/MachineLearning/MachineLearningComponent'));
 const WebDesignComponent = React.lazy(() => import('../src/components/WebDesign/WebDesignComponent'));
 const TrainingComponent = React.lazy(() => import('../src/components/Training/TrainingComponent'));
@@ -20,6 +20,7 @@ function App() {
         <div className="content-wrapper"> {/* Add this wrapper */}
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
+            <Route path="/" element={<HomeComponent />} />
             <Route path="/login" element={<LoginComponent />} />
               <Route path="/machine-learning" element={<MachineLearningComponent />} />
               <Route path="/web-design" element={<WebDesignComponent />} />
