@@ -1,12 +1,33 @@
+:root {
+  --bs-primary: #1E90FF; /* New Blue */
+  --bs-secondary: #3498DB; /* Blue */
+  --bs-success: #2ECC71; /* Green */
+  --bs-light: #F8F9FA; /* Very Light Gray */
+  --bs-dark: #333333; /* Dark Gray */
+  --bs-body-bg: var(--bs-light);
+  --bs-body-color: var(--bs-dark);
+}
+
+/* Apply global styles */
 body {
+  background-color: #F8F9FA;
+  color: var(--bs-body-color);
+  font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
   margin: 0;
-  background: linear-gradient(180deg, rgb(117, 81, 194), rgb(255, 255, 255));
-  display: flex;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
+  padding: 0;
+}
+
+/* Ensure Bootstrap variables are applied */
+.navbar {
+  background-color: var(--bs-primary) !important;
+}
+
+.nav-link {
+  color: var(--bs-body-color) !important;
+}
+
+.navbar-brand {
+  color: var(--bs-body-color) !important;
 }
 
 main {
