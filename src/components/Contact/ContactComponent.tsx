@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
-import AWSAppSyncClient, { AUTH_TYPE } from 'aws-appsync';
-import gql from 'graphql-tag';
-import awsconfig from '../../../src/aws-exports';
+import { ApolloClient, InMemoryCache, HttpLink, gql } from '@apollo/client';
 import './ContactComponent.module.css'; // Import your custom CSS file
 
-const client = new AWSAppSyncClient({
-  url: awsconfig.aws_appsync_graphqlEndpoint,
-  region: awsconfig.aws_appsync_region,
-  auth: {
-    type: AUTH_TYPE.API_KEY,
-    apiKey: awsconfig.aws_appsync_apiKey,
+const client = new ApolloClient({
+  link: new HttpLink({ uri: "https://w5574xwipbd4tfluh7ml5yfb4i.appsync-api.us-east-2.amazonaws.com/graphql" }),
+  cache: new InMemoryCache(),
+  headers: {
+    'x-api-key': "3n576r4r4rem3h7vekphtjikd4",
   },
 });
 

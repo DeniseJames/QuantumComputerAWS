@@ -1,0 +1,33 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-quantumcomputeraws-dev-6cac2-authRole",
+      "UnauthRoleArn": "arn:aws:iam::976999488553:role/amplify-quantumcomputeraws-dev-6cac2-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::976999488553:role/amplify-quantumcomputeraws-dev-6cac2-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-quantumcomputeraws-dev-6cac2-deployment",
+      "UnauthRoleName": "amplify-quantumcomputeraws-dev-6cac2-unauthRole",
+      "StackName": "amplify-quantumcomputeraws-dev-6cac2",
+      "StackId": "arn:aws:cloudformation:us-east-1:976999488553:stack/amplify-quantumcomputeraws-dev-6cac2/8ac69570-6d31-11ef-8bb4-0affebf21007",
+      "AmplifyAppId": "d13ablo108e9lk"
+    },
+    "categories": {
+      "api": {
+        "quantumcomputeraws": {}
+      }
+    }
+  },
+  "appsyndev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-quantumcomputeraws-appsyndev-76e6c-authRole",
+      "UnauthRoleArn": "arn:aws:iam::976999488553:role/amplify-quantumcomputeraws-appsyndev-76e6c-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::976999488553:role/amplify-quantumcomputeraws-appsyndev-76e6c-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-quantumcomputeraws-appsyndev-76e6c-deployment",
+      "UnauthRoleName": "amplify-quantumcomputeraws-appsyndev-76e6c-unauthRole",
+      "StackName": "amplify-quantumcomputeraws-appsyndev-76e6c",
+      "StackId": "arn:aws:cloudformation:us-east-1:976999488553:stack/amplify-quantumcomputeraws-appsyndev-76e6c/858e7040-6d5f-11ef-b7fd-0e2a5d7821b3",
+      "AmplifyAppId": "d13ablo108e9lk"
+    }
+  }
+}

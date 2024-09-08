@@ -1,0 +1,26 @@
+type Contact {
+  id: ID!
+  email: String!
+  name: String!
+  comment: String!
+}
+
+input CreateContactInput {
+  email: String!
+  name: String!
+  comment: String!
+}
+
+type Mutation {
+  createContact(input: CreateContactInput!): Contact
+}
+
+type Query {
+  getContact(id: ID!): Contact
+  listContacts: [Contact]
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}

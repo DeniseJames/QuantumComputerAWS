@@ -12,6 +12,7 @@ const WebDesignComponent = React.lazy(() => import('../src/components/WebDesign/
 const TrainingComponent = React.lazy(() => import('../src/components/Training/TrainingComponent'));
 const LoginComponent = React.lazy(() => import('./components/LogIn/LoginComponent'));
 const SearchResults = React.lazy(() => import('../src/components/SearchResults/SearchResultsComponent'));
+const ContactComponent = React.lazy(() => import('../src/components/Contact/ContactComponent'));
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               <Route path="/web-design" element={<WebDesignComponent />} />
               <Route path="/training" element={<TrainingComponent />} />
               <Route path="/search" element={<SearchResults />} />
+              <Route path="/contact" element={<ContactComponent />} />
             </Routes>
           </Suspense>
         </div>
